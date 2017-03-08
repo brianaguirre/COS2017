@@ -40,14 +40,14 @@
 		-o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		color: #e0555a;
+		color: #0099DD;
 		text-decoration: none;
 		border-bottom: dotted 1px;
 	}
 
 		a:hover {
 			text-decoration: none;
-			color: #e0555a !important;
+			color: #00CDFF !important;
 			border-bottom-color: transparent;
 		}
 
@@ -1235,7 +1235,7 @@
 		background-position: top left,					center center;
 		background-repeat: repeat,						no-repeat;
 		background-size: auto,						cover;
-		color: #d1d2d4;
+		color: #111111;
 		padding: 16em 0;
 		position: relative;
 		text-align: center;
