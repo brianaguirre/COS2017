@@ -43,7 +43,9 @@
                 left: 500px;
                 bottom: 190px;
             }
-            
+            .alt skel-layers-fixed {
+                background-color: aqua;
+            }
             .inner {
                 text-align: left;
                 width: 75%;
@@ -63,13 +65,33 @@
                 -webkit-margin-end: 0px;
                 
             }
+            #bg {
+position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+            
         </style>
 	</head>
 	<body class="landing">
-
+        <div id="bg">
+        <img src="images/bg6.jpg" alt="">
+        </div>
 		<!-- Header -->
 			<header id="header" class="alt skel-layers-fixed">
-				<h1 id="Home"><a href="https://osf.io/w73r5/"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Open Science Framework</a></h1>
+				<h1><a href="https://osf.io/w73r5/"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Open Science Framework</a></h1>
                 
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="images/cos-white2.png" ></h1>
 				<nav id="nav">
@@ -89,15 +111,14 @@
 					</ul>
 				</nav>
 			</header>
-
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
 					<h2>Dashboard</h2>
 					<form>
-						  <input type="text" placeholder="Quick search your projects"></input>
+						  <input type="text" placeholder="Quick search your projects"> </input>
 					</form>
-					<p>Go to <a href="http://osf.io/myprojects/">My Projects</a> to organize your work or <a href="https://osf.io/search/">search</a> the OSF</p>
+					<p>&nbsp; &nbsp; &nbsp; Go to <a href="http://osf.io/myprojects/">My Projects</a> to organize your work or <a href="https://osf.io/search/">search</a> the OSF</p>
 					<ul class="actions">
 						<li><a href="https://osf.io/" id="button">Create a new project</a></li>
 					</ul>

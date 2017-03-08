@@ -1071,18 +1071,17 @@
 			-ms-animation: reveal-header 0.5s;
 			animation: reveal-header 0.5s;
 		}
-
-		#header.alt {
+		/* Changes color of static header */ 
+		#header.alt { 
 			-moz-animation: none;
 			-webkit-animation: none;
 			-o-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background-color: transparent;
+			background-color: #101010;
 			box-shadow: none;
 			color: #fff;
 		}
-
 		#header h1 {
 			color: inherit;
 			font-size: 1em;
@@ -1227,11 +1226,10 @@
 			}
 
 /* Banner */
-
+	/* CHANGES BACKGROUND */ 
 	#banner {
 		background-attachment: scroll,						fixed;
-		background-color: #494d53;
-		background-image: url("images/overlay.png"), url("../images/banner.jpg");
+		
 		background-position: top left,					center center;
 		background-repeat: repeat,						no-repeat;
 		background-size: auto,						cover;
@@ -1241,22 +1239,7 @@
 		text-align: center;
 	}
 
-		#banner:after {
-			-moz-transition: opacity 2s ease-in-out;
-			-webkit-transition: opacity 2s ease-in-out;
-			-o-transition: opacity 2s ease-in-out;
-			-ms-transition: opacity 2s ease-in-out;
-			transition: opacity 2s ease-in-out;
-			background: #3d4045;
-			content: '';
-			height: 100%;
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			z-index: 1;
-		}
+	
 
 		#banner :last-child {
 			margin-bottom: 0;
