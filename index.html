@@ -103,15 +103,36 @@
                 -webkit-margin-end: 0px;
                 
             }
+             #bg {
+position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
         </style>
+        
+       
 	</head>
 	<body class="landing">
-
+       <div id="bg">
+        <img src="images/bg6.jpg" alt="">
+    </div>
 		<!-- Header -->
 			<header id="header" class="alt skel-layers-fixed">
 				<h1 id="Home"><a href="https://osf.io/w73r5/"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Open Science Framework</a></h1>
                 
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="images/cos-white2.png" ></h1>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="images/cos-white2.png" >
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Dashboard</a></li>
