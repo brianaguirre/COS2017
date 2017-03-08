@@ -141,29 +141,30 @@
 					<ul class="actions">
 						<li><a href="https://osf.io/" id="button">Create a new project</a></li>
 					</ul>
-					<p>Click on the links inside the tabbed menu:</p>
 
 					<div class="tab">
-						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')">London</a>
-						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">Paris</a>
-						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</a>
+						 <a href="javascript:void(0)" class="tablinks active" onclick="openCity(event, 'My Projects')">My Projects</a>
+						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Recommended')">Recommended</a>
+						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'New and Noteworthy')">New and Noteworthy</a>
+						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'History')">History</a>
 					</div>
 
-					<div id="London" class="tabcontent">
-						 <h3>London</h3>
-						 <p>London is the capital city of England.</p>
+					<div id="My Projects" class="tabcontent" style="display:block">
+						 <p>My Projects go here...</p>
 					</div>
 
-					<div id="Paris" class="tabcontent">
-						 <h3>Paris</h3>
-						 <p>Paris is the capital of France.</p> 
+					<div id="Recommended" class="tabcontent">
+						 <p>Here is where recommended items go...</p> 
 					</div>
 
-					<div id="Tokyo" class="tabcontent">
-						 <h3>Tokyo</h3>
-  						 <p>Tokyo is the capital of Japan.</p>
+					<div id="New and Noteworthy" class="tabcontent">
+						 <p>Popular items go here...</p>
 					</div>
-
+					
+					<div id="History" class="tabcontent">
+						 <p>No incognito here...</p>
+					</div>
+					
 					<script>
 						function openCity(evt, cityName) {
     						var i, tabcontent, tablinks;
