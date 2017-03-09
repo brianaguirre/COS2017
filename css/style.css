@@ -89,6 +89,7 @@
 	}
 
 	h3 {
+       
 		font-size: 1.25em;
 		line-height: 1.5em;
 	}
@@ -180,7 +181,7 @@ body {font-family: "Lato", sans-serif;}
 div.tab {
 	position:relative;
 	right:200px;
-	bottom: 250px;
+	bottom: 200px;
     float: left;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
@@ -219,13 +220,14 @@ div.tab button.active {
 position:relative;
 	float:left;
 	left:70px;
-	bottom:630px;
+	bottom:570px;
     padding: 0px 12px;
-    border: 10px solid #ccc;
-	background: #ccc;
+    border: 10px solid transparent;
+    background-color: #F0F8FF;
+	background-image: url('images/bg6.jpg');
     width: 100%;
     border-left: none;
-    height: 380px;
+    height: 370px;
 }
 
 /* Button */
@@ -246,7 +248,7 @@ position:relative;
                 border-radius: 2px;
                 position: relative;
                 right: 200px;
-                bottom: 260px;
+                bottom: 200px;
             }
             
             .inner {
@@ -974,14 +976,16 @@ position: fixed;
 
 		table td {
 			padding: 0.75em 0.75em;
+            background-color: rgba(255,255,255,0.3);
 		}
 
 		table th {
 			color: #545454;
-			font-size: 0.9em;
+			font-size: 1.2em;
 			font-weight: 700;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
+            background-color: rgba(255,255,255,0.3);
 		}
 
 		table thead {
@@ -1505,9 +1509,15 @@ position: fixed;
 			margin-bottom: 0;
 		}
 
-		#banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
+		#banner h2, #banner h4, #banner h5, #banner h6 {
 			color: #ffffff;
 		}
+        #banner h1 {
+            color: #121212;
+         }
+        #banner h3 {
+            color: #454545;
+         }
 
 		#banner .inner {
 			position: relative;
@@ -1540,6 +1550,11 @@ position: fixed;
 			margin-bottom: 1.75em;
 			color: #000;
 		}
+        
+        #banner h3 {
+            font-size: 2.5em;
+            line-height: .75em;
+         }
 
 	body.is-loading #banner:after {
 		opacity: 1.0;
