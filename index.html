@@ -70,8 +70,63 @@
 					</form>
 					<p>Go to <a href="http://osf.io/myprojects/">My Projects</a> to organize your work or <a href="https://osf.io/search/">search</a> the OSF</p>
 					<ul class="actions">
-						<li><a href="https://osf.io/" id="button">Create a new project</a></li>
+						<li><a href="#" id="button">Create a new project</a></li>
 					</ul>
+					
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<p>Create New Project</p>
+    <p>Title</p>
+	<form>
+		<input type="text" placeholder="Enter Project Title"></input>
+	</form>
+	<a href="#" id="button3">Cancel</a>
+	<a href="#" id="button2">Create</a>
+	
+	
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+var btn2 = document.getElementById("button2");
+var btn3 = document.getElementById("button3");
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+btn2.onclick = function() {
+	modal.style.display = "none";
+}
+btn3.onclick = function() {
+	modal.style.display = "none";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 					<!-- Tabs -->
 
 <div class="tab">
@@ -82,23 +137,19 @@
 </div>
 
 <div id="My Projects" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+  <p></p>
 </div>
 
 <div id="Recommended" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+	 <p></p>
 </div>
 
 <div id="New and Noteworthy" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <p></p>
 </div>
 
 <div id="History" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+  <p></p>
 </div>
 
 <script>
