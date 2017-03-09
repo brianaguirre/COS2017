@@ -997,7 +997,7 @@
 	}
 
 		.wrapper.style1 {
-		    background-image: url('images/bg6.jpg');;
+		    background-image: url('images/bg6.jpg');
 		}
 
 			.wrapper.style1 .box {
@@ -1241,7 +1241,7 @@
 		}
 
 		#banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
-			color: #ffffff;
+			color: #000;
 		}
 
 		#banner .inner {

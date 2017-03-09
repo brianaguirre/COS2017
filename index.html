@@ -20,50 +20,76 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="css/home-page.css"/>
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
         <style>
-			body {font-family: "Lato", sans-serif;}
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+/* Style the tab */
+div.tab {
+	position:relative;
+	right:190px;
+	top: 10px;
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+	height: 25%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    background-color: #ccc;
+}
+/* Style the tab content */
+    .tabcontent {
+        position:relative;
+        float:left;
+        left:10px;
+        bottom:300px;
+        padding: 0px 12px;
+        border: 10px solid transparent;
+        background-image: url('images/bg6.jpg');
+        width: 120%;
+        border-left: none;
+        height: 400px;
+    }
+</style>
+		<style> 
+            table {
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            border-collapse: collapse;
+            border-spacing: 5px;
+            width: 100%;
+            background-color: white;
+            color: black;
+            }
+            
+            table, th, td {
+            padding: 5px;
+        }
 
-	 		/* Style the tab */
-   		 	 	div.tab {
-    	 	 	overflow: hidden;
-    		  	border: 1px solid #ccc;
-    			background-color: #f1f1f1;
-			}
-
- 			/* Style the links inside the tab */
-			div.tab a {
-    	   	 	float: left;
-    	   		display: block;
-    		 	color: black;
-    	   		text-align: center;
-    			padding: 14px 16px;
-    		 	text-decoration: none;
-    			transition: 0.3s;
-    			font-size: 17px;
-			}
-
- 			/* Change background color of links on hover */
-   		  	div.tab a:hover {
-   				background-color: #ddd;
-			}
-
- 			/* Create an active/current tablink class */
-			div.tab a:focus, .active {
-    			background-color: #ccc;
-			}
-
- 			/* Style the tab content */
-   		 	.tabcontent {
-    		    display: none;
-    		 	padding: 6px 12px;
-    		 	border: 1px solid #ccc;
-				border-top: none;
-		    }
- 		</style>
-        <style> 
             #button {
                 background-color: #52A452;
                 border-color: #54AC54;
@@ -80,8 +106,8 @@
                 vertical-align: middle;
                 border-radius: 2px;
                 position: absolute;
-                top: -20px;
-                right: -10px;
+                top: 105px;
+                left: 165px;
             }
             
             .inner {
@@ -104,33 +130,38 @@
                 
             }
              #bg {
-position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
-}
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
-}
+              position: fixed; 
+              top: -50%; 
+              left: -50%; 
+              width: 200%; 
+              height: 200%;
+                 z-index: -1;
+            }
+            #bg img {
+              position: absolute; 
+              top: 0; 
+              left: 0; 
+              right: 0; 
+              bottom: 0; 
+              margin: auto; 
+              min-width: 50%;
+              min-height: 50%;
+            }
         </style>
         
        
 	</head>
 	<body class="landing">
+<!--        BACKGROUND IMAGE-->
        <div id="bg">
         <img src="images/bg6.jpg" alt="">
-    </div>
+    	</div>
+    	
+
+
 		<!-- Header -->
 			<header id="header" class="alt skel-layers-fixed">
-				<h1 id="Home"><a href="https://osf.io/w73r5/"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Open Science Framework</a></h1>
+				<h1><a href="https://osf.io/w73r5/"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Open Science Framework</a></h1>
                 
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="images/cos-white2.png" >
 				<nav id="nav">
@@ -138,7 +169,7 @@ position: fixed;
 						<li><a href="index.html">Dashboard</a></li>
 						<li><a href="left-sidebar.html">My Projects</a></li>
 						<li>
-							<a href="" class="icon fa-angle-down">Browse</a>
+							Browse <a href="" class="icon fa-angle-down"></a>
 							<ul>
 								<li><a href="left-sidebar.html">New Projects</a></li>
 								<li><a href="right-sidebar.html">Registries</a></li>
@@ -146,7 +177,16 @@ position: fixed;
 								<li><a href="no-sidebar.html">PrePrints</a></li>
 							</ul>
 						</li>
-						<li><a href="elements.html">Elements</a></li>
+						&nbsp; &nbsp; &nbsp; <img src="images/search-icon.png" style="width:60px;height:40px;">
+						<li>
+							Name <a href="" class="icon fa-angle-down"></a>
+							<ul>
+								<li><a href="left-sidebar.html">My Profile</a></li>
+								<li><a href="right-sidebar.html">Support</a></li>
+								<li><a href="no-sidebar.html">Settings</a></li>
+								<li><a href="no-sidebar.html">Logout</a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 			</header>
@@ -162,45 +202,89 @@ position: fixed;
 					<ul class="actions">
 						<li><a href="https://osf.io/" id="button">Create a new project</a></li>
 					</ul>
+					<!-- Tabs -->
 
-					<div class="tab">
-						 <a href="javascript:void(0)" class="tablinks active" onclick="openCity(event, 'My Projects')">My Projects</a>
-						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Recommended')">Recommended</a>
-						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'New and Noteworthy')">New and Noteworthy</a>
-						 <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'History')">History</a>
-					</div>
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'My Projects')" id="defaultOpen">My Projects</button>
+  <button class="tablinks" onclick="openTab(event, 'Recommended')">Recommended</button>
+  <button class="tablinks" onclick="openTab(event, 'New and Noteworthy')">New and Noteworthy</button>
+  <button class="tablinks" onclick="openTab(event, 'History')">History</button>
+</div>
 
-					<div id="My Projects" class="tabcontent" style="display:block">
-						 <p>My Projects go here...</p>
-					</div>
+<div id="My Projects" class="tabcontent">
+  <h3>London</h3>
+    <table class="scroll">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+  <p>London is the capital city of England.</p>
+</div>
 
-					<div id="Recommended" class="tabcontent">
-						 <p>Here is where recommended items go...</p> 
-					</div>
+<div id="Recommended" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
 
-					<div id="New and Noteworthy" class="tabcontent">
-						 <p>Popular items go here...</p>
-					</div>
-					
-					<div id="History" class="tabcontent">
-						 <p>No incognito here...</p>
-					</div>
-					
-					<script>
-						function openCity(evt, cityName) {
-    						var i, tabcontent, tablinks;
-    						tabcontent = document.getElementsByClassName("tabcontent");
-    						for (i = 0; i < tabcontent.length; i++) {
-        						tabcontent[i].style.display = "none";
-    						}
-    						tablinks = document.getElementsByClassName("tablinks");
-    						for (i = 0; i < tablinks.length; i++) {
-        						tablinks[i].className = tablinks[i].className.replace(" active", "");
-    						}
-    						document.getElementById(cityName).style.display = "block";
-    						evt.currentTarget.className += " active";
-						}
-					</script>
+<div id="New and Noteworthy" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="History" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 				</div>
 			</section>
 
@@ -208,28 +292,36 @@ position: fixed;
 			<section id="one" class="wrapper style1">
 				<div class="container">
 					<header class="major">
+<!--
 						<h2>Lorem ipsum dolor</h2>
 						<p>Ipsum dolor tempus commodo turpis adipiscing adipiscing in tempor placerat<br />
 						sed amet accumsan enim lorem sem turpis ut. Massa amet erat accumsan curae<br />
 						blandit porttitor faucibus in nisl nisi volutpat massa mi non nascetur.</p>
+-->
 					</header>
-					<div class="slider">
-						<span class="nav-previous"></span>
-						<div class="viewer">
-							<div class="reel">
-								<div class="slide">
-									<img src="images/bg6.jpg" alt="" />
+					
+
+
+
+					<!-- SLIDER: HIDE CONTAINER FOR LATER USAGE
+							<div class="slider">
+								<span class="nav-previous"></span>
+								<div class="viewer">
+									<div class="reel">
+										<div class="slide">
+											<img src="images/bg6.jpg" alt="" />
+										</div>
+										<div class="slide">
+											<img src="images/slide02.jpg" alt="" />
+										</div>
+										<div class="slide">
+											<img src="images/slide03.jpg" alt="" />
+										</div>
+									</div>
 								</div>
-								<div class="slide">
-									<img src="images/slide02.jpg" alt="" />
-								</div>
-								<div class="slide">
-									<img src="images/slide03.jpg" alt="" />
-								</div>
+								<span class="nav-next"></span>
 							</div>
-						</div>
-						<span class="nav-next"></span>
-					</div>
+							-->
 				</div>
 			</section>
 			
@@ -360,6 +452,59 @@ position: fixed;
 			</section>
 			
 		<!-- Footer -->
+
+
+			<footer class="footer m-t-lg m-b-lg p-lg bg-color-light">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-sm-2 col-md-3 col-md-offset-1">
+			                <h4>OSF</h4>
+			                <ul>
+			                    <li><a href="https://osf.io/explore/activity/">Explore</a></li>
+			                    <li><script type="text/javascript">document.write("<n uers=\"znvygb:pbagnpg@bfs.vb\" ery=\"absbyybj\">Pbagnpg</n>".replace(/[a-zA-Z]/g,function(e){return String.fromCharCode((e<="Z"?90:122)>=(e=e.charCodeAt(0)+13)?e:e-26)}));</script><a href="mailto:contact@osf.io" rel="nofollow">Contact</a><noscript>Contact OSF: &lt;span class="obfuscated-email-noscript"&gt;&lt;strong&gt;&lt;u&gt;cont&lt;span style="display:none;"&gt;null&lt;/span&gt;act@&lt;span style="display:none;"&gt;null&lt;/span&gt;osf.&lt;span style="display:none;"&gt;null&lt;/span&gt;io&lt;/u&gt;&lt;/strong&gt;&lt;/span&gt;</noscript></li>
+			                    <li><a href="https://osf.io/support">FAQ/Guides</a></li>
+			                    <li><a href="https://api.osf.io/v2/docs/">API</a></li>
+			                    <li><a href="https://github.com/CenterForOpenScience/osf.io">Source Code</a></li>
+			                </ul>
+			            </div>
+			            <div class="col-sm-5 col-md-4">
+			                <h4>Center for Open Science</h4>
+			                <ul>
+			                    <li><a href="http://cos.io">Home</a></li>
+			                    <li><a href="https://osf.io/ezcuj/wiki/home/">Reproducibility Project: Psychology</a></li>
+			                    <li><a href="https://osf.io/e81xl/wiki/home/">Reproducibility Project: Cancer Biology</a></li>
+			                    <li><a href="http://cos.io/top/">TOP Guidelines</a></li>
+			                     <li><a href="https://www.crowdrise.com/donate/charity/centerforopenscience">Donate</a></li>
+			               </ul>
+			            </div>
+			            <div class="col-sm-4 col-md-3">
+			                <h4>Socialize</h4>
+			                <a href="http://twitter.com/OSFramework" aria-label="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+			                <a href="https://www.facebook.com/OpenScienceFramework" aria-label="Facebook"><i class="fa fa-facebook fa-2x"></i></a>
+			                <a href="https://groups.google.com/forum/#!forum/openscienceframework" aria-label="Google Group"><i class="fa fa-group fa-2x"></i></a>
+			                <a href="https://www.github.com/centerforopenscience" aria-label="GitHub"><i class="fa fa-github fa-2x"></i></a>
+			                <a href="https://plus.google.com/103557785986281627994" aria-label="Google Plus" rel="publisher"><i class="fa fa-google-plus fa-2x"></i></a>
+			            </div> <!-- column -->
+			        </div>
+			    </div>
+			</footer>
+
+
+
+			<!-- COPY RIGHT CONTAINER -->
+			<div class="container copyright">
+			    <div class="row">
+			        <div class="col-md-12">
+			            <p>Copyright © 2011-2017 <a href="https://cos.io/">Center for Open Science</a> |
+			                <a href="https://github.com/CenterForOpenScience/centerforopenscience.org/blob/master/TERMS_OF_USE.md">Terms of Use</a> |
+			                <a href="https://github.com/CenterForOpenScience/centerforopenscience.org/blob/master/PRIVACY_POLICY.md">Privacy Policy</a>
+			            </p>
+			        </div>
+			    </div>
+			</div>
+			<!-- END COPY RIGHT CONTAINER -->
+
+			<!-- OLD FOOTER
 			<footer id="footer">
 				<ul class="icons">
 					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -378,6 +523,7 @@ position: fixed;
 					&copy; Brian Aguirre Twitter: @bnap48 GitHub: @brianaguirre
 				</span>
 			</footer>
+			-->
 
 	</body>
 </html>
