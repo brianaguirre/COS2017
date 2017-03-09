@@ -76,7 +76,13 @@
 			color: inherit;
 			text-decoration: none;
 		}
-
+    h1 {
+    position: relative;
+        bottom:100px;
+        right:200px;
+        font-size: 4.2em;
+        line-height: 1.5em;
+     }
 	h2 {
 		font-size: 1.75em;
 		line-height: 1.5em;
@@ -174,11 +180,11 @@ body {font-family: "Lato", sans-serif;}
 div.tab {
 	position:relative;
 	right:200px;
-	top: 100px;
+	bottom: 250px;
     float: left;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width: 30%;
+    width: 26%;
     height: 300px;
 }
 
@@ -190,7 +196,7 @@ div.tab button {
     padding: 22px 16px;
     width: 100%;
 	height: 25%;
-    border: none;
+    border: 1px solid #AAA;
     outline: none;
     text-align: left;
     cursor: pointer;
@@ -212,14 +218,14 @@ div.tab button.active {
 .tabcontent {
 position:relative;
 	float:left;
-	left:110px;
-	bottom:300px;
+	left:70px;
+	bottom:630px;
     padding: 0px 12px;
     border: 10px solid #ccc;
 	background: #ccc;
     width: 100%;
     border-left: none;
-    height: 400px;
+    height: 380px;
 }
 /* Button */
 #button {
@@ -228,9 +234,9 @@ position:relative;
                 margin-top: 20px;
                 color: white;
                 display: inline-block;
-                padding: 6px 12px;
+                padding: 12px 26px;
                 margin-bottom: 20px;
-                font-size: 14px;
+                font-size: 18px;
                 font-weight: 570;                
                 line-height: 1.42857143;
                 text-align: center;
@@ -238,8 +244,8 @@ position:relative;
                 vertical-align: middle;
                 border-radius: 2px;
                 position: relative;
-                left: 500px;
-                bottom: 190px;
+                right: 200px;
+                bottom: 260px;
             }
             
             .inner {
@@ -458,6 +464,7 @@ position: fixed;
 	}
 
 	input[type="text"],
+    input[type="searchbar"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -477,9 +484,13 @@ position: fixed;
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
+        position: relative;
+        bottom:190px;
+        left:70px;
 	}
 
 		input[type="text"]:invalid,
+         input[type="searchbar"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		select:invalid,
@@ -488,6 +499,7 @@ position: fixed;
 		}
 
 		input[type="text"]:focus,
+         input[type="searchbar"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		select:focus,
@@ -500,6 +512,7 @@ position: fixed;
 		text-decoration: none;
 		display: block;
 		position: relative;
+        
 	}
 
 		.select-wrapper:before {
@@ -530,10 +543,12 @@ position: fixed;
 		}
 
 	input[type="text"],
+     input[type="searchbar"],
 	input[type="password"],
 	input[type="email"],
 	select {
 		height: 2.75em;
+        
 	}
 
 	textarea {
