@@ -82,13 +82,26 @@ div.tab button.active {
             border-collapse: collapse;
             border-spacing: 5px;
             width: 100%;
-            background-color: white;
-            color: black;
+            color: #555;
+            cursor: pointer;
+            }
+            
+            #bottom:hover {
+                background-color:#337ab7;
+                color: white;
             }
             
             table, th, td {
-            padding: 5px;
-        }
+                border: 1px solid transparent;
+            }
+            
+            #bottom {
+                background-color: white;
+            }
+            #top {
+                background: transparent;
+                height: 20px;
+            }
 
             #button {
                 background-color: #52A452;
@@ -212,8 +225,63 @@ div.tab button.active {
 </div>
 
 <div id="My Projects" class="tabcontent">
-  <h3>London</h3>
     <table class="scroll">
+  <tr id="top">
+    <th>Title <a href="" class="icon fa-angle-up"></a>     <a href="" class="icon fa-angle-down"></a></th>
+    <th>Contributors</th>
+    <th>Modified <a href="" class="icon fa-angle-up"></a>     <a href="" class="icon fa-angle-down"></a></th>
+  </tr>
+  <tr id="bottom">
+    <td style="font-weight:600;">Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr id="bottom">
+    <td style="font-weight:600;">Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+<!--      <td rowspan="2">$50</td>-->
+  </tr>
+  <tr id="bottom">
+    <td style="font-weight:600;">Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr id="bottom">
+    <td style="font-weight:600;">Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr id="bottom">
+    <td style="font-weight:600;">Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr id="bottom">
+    <td style="font-weight:600;">Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+  <tr id="bottom">
+    <td style="font-weight:600;">Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+</div>
+
+<div id="Recommended" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="New and Noteworthy" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="History" class="tabcontent">
+<table class="scroll">
   <tr>
     <th>Company</th>
     <th>Contact</th>
@@ -249,24 +317,7 @@ div.tab button.active {
     <td>Giovanni Rovelli</td>
     <td>Italy</td>
   </tr>
-</table>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Recommended" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="New and Noteworthy" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<div id="History" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+</table></div>
 
 <script>
 function openTab(evt, tabName) {
@@ -292,12 +343,10 @@ document.getElementById("defaultOpen").click();
 			<section id="one" class="wrapper style1">
 				<div class="container">
 					<header class="major">
-<!--
 						<h2>Lorem ipsum dolor</h2>
 						<p>Ipsum dolor tempus commodo turpis adipiscing adipiscing in tempor placerat<br />
 						sed amet accumsan enim lorem sem turpis ut. Massa amet erat accumsan curae<br />
 						blandit porttitor faucibus in nisl nisi volutpat massa mi non nascetur.</p>
--->
 					</header>
 					
 
