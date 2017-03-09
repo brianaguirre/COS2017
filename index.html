@@ -20,6 +20,7 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="css/home-page.css"/>
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -141,9 +142,13 @@ position: fixed;
        
 	</head>
 	<body class="landing">
+       <!-- BACKGROUND IMAGE
        <div id="bg">
         <img src="images/bg6.jpg" alt="">
-    </div>
+    	</div>
+    	-->
+
+
 		<!-- Header -->
 			<header id="header" class="alt skel-layers-fixed">
 				<h1 id="Home"><a href="https://osf.io/w73r5/"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Open Science Framework</a></h1>
@@ -246,23 +251,29 @@ document.getElementById("defaultOpen").click();
 						sed amet accumsan enim lorem sem turpis ut. Massa amet erat accumsan curae<br />
 						blandit porttitor faucibus in nisl nisi volutpat massa mi non nascetur.</p>
 					</header>
-					<div class="slider">
-						<span class="nav-previous"></span>
-						<div class="viewer">
-							<div class="reel">
-								<div class="slide">
-									<img src="images/bg6.jpg" alt="" />
+					
+
+
+
+					<!-- SLIDER: HIDE CONTAINER FOR LATER USAGE
+							<div class="slider">
+								<span class="nav-previous"></span>
+								<div class="viewer">
+									<div class="reel">
+										<div class="slide">
+											<img src="images/bg6.jpg" alt="" />
+										</div>
+										<div class="slide">
+											<img src="images/slide02.jpg" alt="" />
+										</div>
+										<div class="slide">
+											<img src="images/slide03.jpg" alt="" />
+										</div>
+									</div>
 								</div>
-								<div class="slide">
-									<img src="images/slide02.jpg" alt="" />
-								</div>
-								<div class="slide">
-									<img src="images/slide03.jpg" alt="" />
-								</div>
+								<span class="nav-next"></span>
 							</div>
-						</div>
-						<span class="nav-next"></span>
-					</div>
+							-->
 				</div>
 			</section>
 			
@@ -393,6 +404,59 @@ document.getElementById("defaultOpen").click();
 			</section>
 			
 		<!-- Footer -->
+
+
+			<footer class="footer m-t-lg m-b-lg p-lg bg-color-light">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-sm-2 col-md-3 col-md-offset-1">
+			                <h4>OSF</h4>
+			                <ul>
+			                    <li><a href="https://osf.io/explore/activity/">Explore</a></li>
+			                    <li><script type="text/javascript">document.write("<n uers=\"znvygb:pbagnpg@bfs.vb\" ery=\"absbyybj\">Pbagnpg</n>".replace(/[a-zA-Z]/g,function(e){return String.fromCharCode((e<="Z"?90:122)>=(e=e.charCodeAt(0)+13)?e:e-26)}));</script><a href="mailto:contact@osf.io" rel="nofollow">Contact</a><noscript>Contact OSF: &lt;span class="obfuscated-email-noscript"&gt;&lt;strong&gt;&lt;u&gt;cont&lt;span style="display:none;"&gt;null&lt;/span&gt;act@&lt;span style="display:none;"&gt;null&lt;/span&gt;osf.&lt;span style="display:none;"&gt;null&lt;/span&gt;io&lt;/u&gt;&lt;/strong&gt;&lt;/span&gt;</noscript></li>
+			                    <li><a href="https://osf.io/support">FAQ/Guides</a></li>
+			                    <li><a href="https://api.osf.io/v2/docs/">API</a></li>
+			                    <li><a href="https://github.com/CenterForOpenScience/osf.io">Source Code</a></li>
+			                </ul>
+			            </div>
+			            <div class="col-sm-5 col-md-4">
+			                <h4>Center for Open Science</h4>
+			                <ul>
+			                    <li><a href="http://cos.io">Home</a></li>
+			                    <li><a href="https://osf.io/ezcuj/wiki/home/">Reproducibility Project: Psychology</a></li>
+			                    <li><a href="https://osf.io/e81xl/wiki/home/">Reproducibility Project: Cancer Biology</a></li>
+			                    <li><a href="http://cos.io/top/">TOP Guidelines</a></li>
+			                     <li><a href="https://www.crowdrise.com/donate/charity/centerforopenscience">Donate</a></li>
+			               </ul>
+			            </div>
+			            <div class="col-sm-4 col-md-3">
+			                <h4>Socialize</h4>
+			                <a href="http://twitter.com/OSFramework" aria-label="Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+			                <a href="https://www.facebook.com/OpenScienceFramework" aria-label="Facebook"><i class="fa fa-facebook fa-2x"></i></a>
+			                <a href="https://groups.google.com/forum/#!forum/openscienceframework" aria-label="Google Group"><i class="fa fa-group fa-2x"></i></a>
+			                <a href="https://www.github.com/centerforopenscience" aria-label="GitHub"><i class="fa fa-github fa-2x"></i></a>
+			                <a href="https://plus.google.com/103557785986281627994" aria-label="Google Plus" rel="publisher"><i class="fa fa-google-plus fa-2x"></i></a>
+			            </div> <!-- column -->
+			        </div>
+			    </div>
+			</footer>
+
+
+
+			<!-- COPY RIGHT CONTAINER -->
+			<div class="container copyright">
+			    <div class="row">
+			        <div class="col-md-12">
+			            <p>Copyright © 2011-2017 <a href="https://cos.io/">Center for Open Science</a> |
+			                <a href="https://github.com/CenterForOpenScience/centerforopenscience.org/blob/master/TERMS_OF_USE.md">Terms of Use</a> |
+			                <a href="https://github.com/CenterForOpenScience/centerforopenscience.org/blob/master/PRIVACY_POLICY.md">Privacy Policy</a>
+			            </p>
+			        </div>
+			    </div>
+			</div>
+			<!-- END COPY RIGHT CONTAINER -->
+
+			<!-- OLD FOOTER
 			<footer id="footer">
 				<ul class="icons">
 					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -411,6 +475,8 @@ document.getElementById("defaultOpen").click();
 					&copy; Brian Aguirre Twitter: @bnap48 GitHub: @brianaguirre
 				</span>
 			</footer>
+
+			-->
 
 	</body>
 </html>
